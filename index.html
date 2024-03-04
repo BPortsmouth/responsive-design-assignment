@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Head.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Poppins:wght@500&family=Source+Sans+3:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bdbebef376.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <main class="page-container">
         <header>
-            <nav>
-                <li><a href="index.html">Head.</a></li>
-                <li><a href="#">Works</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contracts</a></li>
+            <nav class="navigation navigation__container">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item_logo"><a class="navigation__link" href="index.html">Head.</a></li>
+                    <li class="navigation__item navigation__item_hidable navigation__item_works" ><a class="navigation__link" href="#">Works</a></li>
+                    <li class="navigation__item navigation__item_hidable navigation__item_services"><a class="navigation__link" href="#">Services</a></li>
+                    <li class="navigation__item navigation__item_hidable navigation__item_contracts"><a class="navigation__link" href="#">Contracts</a></li>
+                    <li class="navigation__item navigation__item_more"><a class="navigation__link" href="#"><i class="fa-solid fa-ellipsis"></i></a></li>
+                </ul>
             </nav>
         </header>
+        <div class="page-content">
+            <h1 class="page-content__title">Japan</h1>
+            <p class="page-content__text">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcor.</p>
+            <div class="page-content__image"
+            alt="A black and white image of Mt. Fuji, Japan. The mountain only reaches up to around one fifth of the image. The ground is black, the sky is white, and the mountain is in various grey tones thanks to the mountains snow cap."
+            title="A black and white image of Mt. Fuji, Japan. The mountain only reaches up to around one fifth of the image. The ground is black, the sky is white, and the mountain is in various grey tones thanks to the mountains snow cap.">
+
+            </div>
+
+        </div>
     </main>
 </body>
 </html>
