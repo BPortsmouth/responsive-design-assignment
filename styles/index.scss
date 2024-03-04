@@ -1,0 +1,155 @@
+@use 'fonts';
+
+
+body{
+    width: 100lvw;
+    height: 100lvh;
+    background-color: black;
+    color: white;
+    font: fonts.$main-font;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.page-container{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navigation{
+    &__list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        min-height: 10rem;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 0.1fr 1fr 0.1fr 0.1fr 0.1fr 0.05fr;
+        column-gap: 2rem;
+
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        &_logo{
+            font: fonts.$logo-font;
+            grid-area: 1/1/2/2;
+        }
+        &_works{
+            grid-area: 1/3/2/4;
+        }
+        &_services{
+            grid-area: 1/4/2/5;
+        }
+        &_contracts{
+            grid-area: 1/5/2/6;
+        }
+        &_more{
+            grid-area: 1/6/2/7;
+            color: #242635;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        color: inherit;
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+    &__link:hover{
+        background-color: white;
+        color: black;
+    }
+}   
+
+.page-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    justify-self: flex-end;
+    &__title{
+        font: fonts.$title-font;
+        margin-bottom: 0;
+
+    }
+    &__text{
+        max-width: 574px ;
+        text-align: center;
+        margin-bottom: 2rem;
+
+    }
+    &__image{
+        width: 100%;
+        margin-top: 1rem;
+        aspect-ratio: 8/3;
+        justify-self: flex-end;
+        background-image: url(../images/mt-fuji-large.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        grid-template-columns: 10% 80% 10%;
+    } 
+    
+    .navigation__list{
+        min-height: 6rem;
+        margin-bottom: 5rem;
+    }
+    .page-content{
+        &__title{
+            margin-top: 5rem;
+        }
+        &__image{
+            aspect-ratio: 1/.8;
+            background-image: url(../images/mt-fuji.png);
+        }
+
+    }
+}
+
+@media screen and (max-width:800px) {
+    body{
+        font-size: 12px;
+    }
+    
+    .navigation{
+        &__list{
+            margin-bottom: 0;
+            min-height: 2rem;
+        }
+
+        &__item{
+            &_hidable{
+                display: none;
+            }
+
+            &_more{
+                font-size: 24px;
+                transform: translateX(-1rem);
+            }
+        }
+    }
+
+    .page-content{
+        &__title{
+            font-size: 36px;
+            margin-top: 2rem;
+        }
+        &__text{
+            max-width: 220px;
+        }
+        &__image{
+            aspect-ratio: .85/1;
+        }
+    }
+    
+}
+
